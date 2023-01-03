@@ -128,6 +128,7 @@ dot.addEventListener("click", (e) =>{
     dotLogic()
 })
 addEventListener("keydown",(e) => {
+    e.preventDefault()
     console.log(textInDisplay)
     if(numBtnArr.includes(e.key)){
         displayText(e.key)
@@ -136,7 +137,6 @@ addEventListener("keydown",(e) => {
         operatorLogic(e.key)
     }
     if(e.key === "Enter"){
-        e.preventDefault()
         pressEqual()
     }
     if(e.key === "."){
@@ -144,9 +144,6 @@ addEventListener("keydown",(e) => {
     }
     if(e.key === "Backspace"){
         deletion()
-    }
-    if(e.key === "/"){
-        e.preventDefault()
     }
 
 })
